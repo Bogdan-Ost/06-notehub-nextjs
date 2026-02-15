@@ -3,7 +3,7 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
-import { fetchNotes } from "@/components/lib/api";
+import { fetchNotes } from "@/app/lib/api";
 
 import Notes from "./Notes";
 export const dynamic = "force-dynamic";
