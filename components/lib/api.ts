@@ -59,3 +59,12 @@ export const deleteNote = async (id: NoteId) => {
   });
   return data;
 };
+
+export const fetchNoteById = async (id: NoteId) => {
+  const { data } = await axios.get<Note>(`${baseURL}/notes/${id}`, {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  return data;
+};
