@@ -7,6 +7,8 @@ import {
 import NoteDetailsClient from "./NoteDetails.client";
 import { fetchNoteById } from "@/components/lib/api";
 
+export const dynamic = "force-dynamic";
+
 export default async function NotePage({ params }: { params: { id: string } }) {
   const { id } = params;
   const queryClient = new QueryClient();
