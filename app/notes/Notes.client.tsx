@@ -54,10 +54,9 @@ export default function Notes() {
           </button>
         }
       </header>
-      {isLoading ||
-        (data?.notes && data.notes.length > 0 && (
-          <NoteList notes={data.notes} />
-        ))}
+      {!isLoading && data?.notes && data.notes.length > 0 && (
+        <NoteList notes={data.notes} />
+      )}
       {isModalOpen && (
         <Modal onClose={toggleModal}>
           <NoteForm onClose={toggleModal} />

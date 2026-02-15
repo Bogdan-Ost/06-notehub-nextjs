@@ -9,8 +9,12 @@ import { fetchNoteById } from "@/lib/api";
 
 export const dynamic = "force-dynamic";
 
-export default async function NotePage({ params }: { params: { id: string } }) {
-  const { id } = params;
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default async function NotePage({ params }: PageProps) {
+  const { id } = await params;
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery({
