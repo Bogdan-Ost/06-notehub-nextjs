@@ -3,7 +3,7 @@ import css from "./NoteForm.module.css";
 import { Formik, Form, Field, type FormikHelpers, ErrorMessage } from "formik";
 
 import * as Yup from "yup";
-import { Note } from "@/types/types";
+import { Note } from "@/types/note";
 import { createNote } from "../../lib/api";
 
 interface FormValues {
